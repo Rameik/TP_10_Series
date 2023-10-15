@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Montserrat&display=swap');
+
+html {
+  font-size: 14px;
+  position: relative;
+  min-height: 100%;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: whitesmoke;
+}
+
+footer {
+  position: fixed; 
+  bottom: 0;
+  margin: 0px 10px 10px 10px;
+}
+
+body{
+  font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3{
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+p{
+  font-family: 'Inter', sans-serif;
+}
+
+.container-series{
+  width: 90%;
+  margin: 0 5%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.serie{
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  margin-inline: 20px;
+  align-items: center;
+  margin-top: 30px;
+  box-shadow: 0 0 20px hsla(0, 0%, 0%, 0.5);
+  border-radius: 40px;
+  transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.serie:hover{
+  transform: scale(1.04);
+}
+
+
+.serie img{
+  border-start-start-radius: 40px;
+  border-start-end-radius: 40px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.links{
+  display: flex;
+  padding: 2%;
+  width: 100%;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.links button{
+  margin-inline: 10px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  background-color: rgb(0, 0, 0, 0);
+  transition: 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.links button:hover{
+  background-color: rgb(0, 0, 0, 0.5);
+}
+
+.container-series{
+  margin-bottom: 30px;
+}
+
+.modal-content{
+  background-color: #141414 !important;
+}
+
+.modal-title{
+  text-align: center !important;
+}
+
+#SerieImagen{
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+#SerieAñoInicio{
+  margin-bottom: 10px;
+}
+
+/* .modal-header .btn-close{
+  font-size: medium;
+  color: #F5F5F5 !important;
+  --bs-btn-close-bg: url(img/cruz.png) !important;
+} */

@@ -1,0 +1,48 @@
+﻿@{
+    ViewData["Title"] = "Inicio";
+}
+
+<body style="background-color: #141414;">
+  <h1 style="font-size: 3rem; margin-top: 30px; color: red;">SeriesFlix</h1>
+  <h3 style="font-size: 1rem; margin-top: 20px; color: red;">Tus series favoritas, en el mismo lugar</h3>
+
+  <div class="container-series">
+      @foreach(var item in ViewBag.ListaSeries){
+          <div class="serie">
+              <img src="@item.ImagenSerie" alt="imagen-serie">
+              <h2>@item.Nombre</h2>
+              <div class="links">
+                  <button type="button" data-bs-toggle="modal" data-bs-target="#ModalSerie" onclick="MostrarTemporadas(@item.IdSerie)">Temporadas</button>
+                  <button type="button" data-bs-toggle="modal" data-bs-target="#ModalSerie" onclick="MostrarActores(@item.IdSerie)">Actores</button>
+                  <button type="button" data-bs-toggle="modal" data-bs-target="#ModalSerie" onclick="MostrarInfoSerie(@item.IdSerie)">Info de la serie</button>
+              </div>
+          </div>
+      }
+  </div>
+
+  <div class="modal fade" tabindex="-1" id="ModalSerie" aria-labelledby="ModalSerieTitle" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="NombreSerie">Modal title</h3>
+          @* <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button> *@
+        </div>
+        <div class="modal-body">
+          <img class="img-fluid" id="SerieImagen">
+          <div id="SerieAñoInicio"></div>
+          <div id="SerieSinopsis"></div>
+          <div id="Temporadas"></div>
+          <div id="NombreActores"></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+
+<script src="~/js/inicio.js"></script>
