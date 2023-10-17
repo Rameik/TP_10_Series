@@ -7,7 +7,7 @@ namespace TP10.Models;
 
 public static class BD
 {
-    private static string connectionString = @"Server = DESKTOP-3DKDU00\SQLEXPRESS; DataBase = BD_Series; Trusted_Connection = True;";
+    private static string connectionString = @"Server = localhost; DataBase = BD_Series; Trusted_Connection = True;";
 
     public static List<Serie> ObtenerListaSeries(){
         using(SqlConnection db = new SqlConnection(connectionString))
